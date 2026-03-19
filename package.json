@@ -1,0 +1,1 @@
+{\n  \"homepage\": \"https://HuapiRodriguez.github.io/pago/\",\n  \"scripts\": {\n    \"predeploy\": \"npm run build\",\n    \"deploy\": \"gh-pages -d build\"\n  }\n}
