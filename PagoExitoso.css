@@ -1,0 +1,249 @@
+.pago-exitoso-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pago-exitoso-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icono de éxito */
+.pago-exitoso-icon {
+  margin-bottom: 30px;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.checkmark-circle {
+  stroke: #4caf50;
+  stroke-width: 2;
+  stroke-linecap: round;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1);
+}
+
+.checkmark-check {
+  stroke: #4caf50;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.4s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Títulos */
+.pago-exitoso-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 20px 0 10px;
+}
+
+.pago-exitoso-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Detalles */
+.pago-exitoso-detalles {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.detalle-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detalle-item:last-child {
+  border-bottom: none;
+}
+
+.detalle-label {
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+}
+
+.detalle-valor {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.detalle-valor.codigo {
+  font-family: 'Courier New', monospace;
+  background: #e8f5e9;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Información */
+.pago-exitoso-info {
+  background: #e8f5e9;
+  border-left: 4px solid #4caf50;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.pago-exitoso-info p {
+  margin: 8px 0;
+  color: #2e7d32;
+  font-size: 14px;
+}
+
+/* Botones */
+.pago-exitoso-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-outline:hover {
+  background: #f5f5f5;
+}
+
+/* Footer */
+.pago-exitoso-footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  color: #999;
+  font-size: 13px;
+}
+
+/* Loading */
+.pago-exitoso-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-size: 18px;
+  color: white;
+}
+
+/* Error */
+.pago-exitoso-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f44336 0%, #e91e63 100%);
+  color: white;
+  text-align: center;
+}
+
+.pago-exitoso-error h2 {
+  margin-bottom: 20px;
+}
+
+.pago-exitoso-error button {
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .pago-exitoso-card {
+    padding: 25px;
+  }
+
+  .pago-exitoso-title {
+    font-size: 24px;
+  }
+
+  .pago-exitoso-acciones {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .detalle-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
